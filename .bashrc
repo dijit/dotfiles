@@ -127,7 +127,7 @@ function ask()
 # weather() -- Check weather {{{
 function weather ()
 {
-    links -dump "http://google.com/search?q=weather+${1:-02138}" | grep -A 5 -m 1 '^ *Weather for' | grep -v 'Add to'
+    links -dump "http://google.com/search?q=weather+${1:-london}" | grep -A 5 -m 1 '^ *Weather for' | grep -v 'Add to'
 }
 # }}}
 
@@ -347,7 +347,12 @@ fi
 # Display stuff after login {{{
 date
 have pom && pom && echo
-have fortune && fortune -c
+case $(uname) in
+    Linux) have fortune && fortune -c
+        ;;
+    Darwin|*BSD) have fortune && fortune
+        ;;
+esac
 echo
 # }}}
 
