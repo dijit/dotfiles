@@ -55,7 +55,12 @@ alias ll='ls -alhF'
 alias la='ls -A'
 alias l='ls -CF'
 alias release='cat /etc/debian_version'
- 
+
+# cd aliases
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+
 # fun
 lookofdissaproval(){
 echo "ಠ_ಠ";
