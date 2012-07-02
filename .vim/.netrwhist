@@ -1,10 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/dijit/.vim/colors'
 let g:netrw_dirhist_2='/home/dijit/.texlive2007/texmf-config'
 let g:netrw_dirhist_3='/home/dijit/.texlive2007'
 let g:netrw_dirhist_4='/home/dijit'
 let g:netrw_dirhist_5='/home/dijit/Documents/syssvn/vpwdb'
 let g:netrw_dirhist_6='/Users/jharasym/.gnupg'
-let g:netrw_dirhist_7='/Users/janharasym/sysconfig'
-let g:netrw_dirhist_8='/Users/janharasym/sysconfig/cbq'
