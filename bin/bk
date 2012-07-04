@@ -1,0 +1,17 @@
+#!/bin/bash
+ALL=$@
+
+bk() {
+TODAY=`date +%Y%m%d`
+for i in $ALL 
+do
+	if [ -f $i ] ; then
+	cp $i "~/$i.${TODAY}";
+    echo  "Copied $i to ${HOME}/$i.${TODAY}";
+	else
+	echo "File not found."
+	fi
+done
+}
+
+bk 2>/dev/null || echo "Unknown Unhandled Error."
