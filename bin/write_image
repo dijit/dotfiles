@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
-SIZE=$(df -h "$1:-~/image.img")
+#SIZE=$(df -h "${1}")
+
+SIZE=$(du -h ${1} | tail -n1 | cut -d"       " -f1)
 
 DISK=$2
 
-dd if="$1:-~/image.img" | pv -s $SIZE | sudo dd of=$DISK bs=4k
+dd if="${1}" | pv -s $SIZE | sudo dd of=$DISK bs=4k
