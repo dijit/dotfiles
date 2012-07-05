@@ -1,0 +1,5 @@
+if [ ! -z $1 ]; then
+	cat $1 | curl -F 'paste=<-' http://s.darkscience.ws;
+else
+	echo 'Please define a file to load';
+fi
