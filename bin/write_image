@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #SIZE=$(df -h "${1}")
 
-SIZE=$(du -h ${1} | tail -n1 | cut -d"       " -f1)
+SIZE=$(du ${1} | tail -n1 | awk '{ print $1 }')
 
 DISK=$2
 
